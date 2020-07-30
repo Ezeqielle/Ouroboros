@@ -6,3 +6,12 @@ npx prisma init
 npx prisma2 migrate save --experimental
 npx prisma2 migrate up --experimental
 npx prisma generate
+
+
+
+--------------------------------------
+on new machine
+--------------------------------------
+docker-compose up -d
+npm install
+npx prisma generate
