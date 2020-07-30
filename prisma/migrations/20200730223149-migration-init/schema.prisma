@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://postgres:changeme@localhost:5432/commubot"
+  url = "***"
 }
 
 generator client {

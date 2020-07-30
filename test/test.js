@@ -15,9 +15,21 @@ client.on('ready', () => {
 client.on('message', async msg => {
     if (msg.content === `${prefix}user`) {
         // await msg.channel.send(`user id : ${msg.author.id}`);       // recup l'id de la personne qui a send le msg
-        testdb.signUp(msg.author);
+        await testdb.signUp(msg.author);
         // await msg.channel.send(`user tag : <@${msg.author.id}>`);   // @user.id pour poke l'user
         // await msg.author.send('test de dm');                 // envoye un dm a celui qui a fait la commande
+    }
+});
+
+client.on('message', async msg => {
+    if (msg.content === `${prefix}find`) {
+        await msg.author.send('test de dm');       // envoye un dm a celui qui a fait la commande
+    }
+});
+
+client.on('message', async msg => {
+    if (msg.content === `${prefix}find`) {
+        await testdb.findUserByDiscId(msg.author);      // recup un user dans la bdd
     }
 });
 
