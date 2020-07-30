@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 global.discordJsClient = client;
 
-const config = require('./config.json')
+const config = require('./config.json');
 const prefix = '!';
 
-const staff = require('./commands/staff.js')
-const adv = require('./commands/advertisers.js')
-const booster = require('./commands/users.js')
+const staff = require('./commands/staff.js');
+const adv = require('./commands/advertisers.js');
+const booster = require('./commands/users.js');
 
 // server commands
 client.on('ready', () => {
