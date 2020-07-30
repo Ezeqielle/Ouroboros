@@ -1,0 +1,41 @@
+recuperer le score RIO de chaque roles pour chaque perso de l'utilisateur puis les stocker dans un tableau et sortir
+le meilleur score heal, tank, dps pour assigner les grades discord par la suite
+
+get https://raider.io/api/v1/characters/profile?region=eu&realm={realm}&name={character}&fields=mythic_plus_scores
+
+exemple reponse:
+
+{
+  "name": "Makilock",
+  "race": "Troll",
+  "class": "Warlock",
+  "active_spec_name": "Destruction",
+  "active_spec_role": "DPS",
+  "gender": "male",
+  "faction": "horde",
+  "achievement_points": 14860,
+  "honorable_kills": 0,
+  "thumbnail_url": "https://render-eu.worldofwarcraft.com/character/hyjal/92/181675100-avatar.jpg?alt=wow/static/images/2d/avatar/8-0.jpg",
+  "region": "eu",
+  "realm": "Hyjal",
+  "profile_url": "https://raider.io/characters/eu/hyjal/Makilock",
+  "profile_banner": "classbanner_warlock1",
+  "mythic_plus_scores": {
+    "all": 1181.5,
+    "dps": 1181.5,
+    "healer": 0,
+    "tank": 0,
+    "spec_0": 0,
+    "spec_1": 0,
+    "spec_2": 1181.5,
+    "spec_3": 0
+  }
+}
+
+data a garder:
+
+"mythic_plus_scores": {
+    "dps": 0,
+    "healer": 0,
+    "tank": 0
+  }
