@@ -1,0 +1,7 @@
+{
+  "USER" : "root",
+  "PASS" : "root",
+  "DRIVER" : "mysql",
+  "HOST" : "localhost",
+  "PORT" : 3306
+}
