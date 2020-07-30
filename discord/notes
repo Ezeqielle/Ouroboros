@@ -1,0 +1,19 @@
+Users {
+    !auth       --> connect avec le compte blizzard pour scan les perso
+    !update     --> met a jour la liste et le rio des perso puis donne les roles associes
+    !b          --> envoie un DM avec la balance de l'utilisateur
+    !logs       --> envoie un DM avec l'historique de boost
+}
+
+Advertiser {
+    !boostd     --> nouveau boost donjon
+    !boostr     --> nouveau boost raid
+    !boosth     --> nouveau boost in house (retire les po de la balance de la personne booster)
+    !strike     --> retire les po de la balance
+}
+
+Staff {
+    !reset      --> reset les roles de tous les utilisateurs (hors admin et staff) + drop les perso en bdd
+    !ban        --> ban l'user, met sa balance a 0 et drop les données de ses perso de la bdd + set status a ban dans la bdd
+    !unban      --> set status a unban dans la bdd
+}
