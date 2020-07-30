@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:root@localhost:3306/commubot"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            Int         @default(autoincrement()) @id
+  createdAt     DateTime    @default(now())
+  discord_id    String      @unique
+  characters    Character[]
+  balances      Balance[]
+}
+
+model Balance {
+    id      Int     @default(autoincrement()) @id
+    realm   String  @required
+    user    User    @relation(fields:[userId], references:[id])
+    userId  Int
+}
+
+model Character {
+    id      Int     @default(autoincrement()) @id
+    name    String  @required
+    server  String  @required
+    wow_id  String  @required
+    class   String  @required
+    user    User    @relation(fields:[userId], references:[id])
+    userId  Int
+    role    Role    @relation(fields:[roleId], references:[id])
+    roleId  Int
+}
+
+model Role {
+    id          Int         @default(autoincrement()) @id
+    heal        Int         @default(0)
+    tank        Int         @default(0)
+    dps         Int         @default(0)
+    character   Character   @relation(fields:[characterId], references:[id])
+    characterId Int
+}
