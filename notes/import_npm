@@ -1,0 +1,8 @@
+npm install discord.js
+npm install @prisma/cli --save-dev
+
+npx prisma init
+
+npx prisma2 migrate save --experimental
+npx prisma2 migrate up --experimental
+npx prisma generate
