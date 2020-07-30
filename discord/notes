@@ -17,5 +17,6 @@ Staff {
     !reset              --> reset les roles de tous les utilisateurs (hors admin et staff) + drop les perso en bdd
     !ban <@user>        --> ban l'user, met sa balance a 0 et drop les données de ses perso de la bdd + set status a ban dans la bdd
     !unban <disc_id>    --> set status a unban dans la bdd
-    !addsrv <realm>     --> ajoute un serveur a la liste des serveur pour les balances
+    !addsrv <realm>     --> ajoute un serveur a la liste des serveur pour les balances (mettre la liste des serv dans config.json et sur la bdd)
+    !rmsrv <realm>      --> enleve un serveur de la liste (le retire du config.json dans un premier temps puis la de bdd apres payement des balances sur le serv en question)
 }
