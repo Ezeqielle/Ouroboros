@@ -1,13 +1,18 @@
-var BnetStrategy = require('passport-bnet').Strategy;
-var BNET_ID = process.env.BNET_ID;
-var BNET_SECRET = process.env.BNET_SECRET;
-var passport = require('passport');
+const BnetStrategy = require('passport-bnet').Strategy;
+const BNET_ID = process.env.BNET_ID;
+const BNET_SECRET = process.env.BNET_SECRET;
+const passport = require('passport');
 
-passport.use(new BnetStrategy({
-    clientID: BNET_ID,
-    clientSecret: BNET_SECRET,
-    callbackURL: "https://localhost/auth/bnet/callback",
-    region: "eu"
-}, (accessToken, refreshToken, profile, done) => {
-    return done(null, profile);
-}));
+// Use the BnetStrategy within Passport.
+passport.use(
+    new BnetStrategy({
+        clientID: BNET_ID,
+        clientSecret: BNET_SECRET,
+        scope: "wow.profile sc2.profile",
+        callbackURL: "https://localhost/auth/bnet/callback"
+    }, (accessToken, refreshToken, profile, done) => {
+        process.nextTick(() => {
+            return done(null, profile);
+        });
+    })
+);
