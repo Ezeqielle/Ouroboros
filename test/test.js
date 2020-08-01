@@ -22,7 +22,7 @@ client.on('message', async msg => {
 });
 
 client.on('message', async msg => {
-    if (msg.content === `${prefix}find`) {
+    if (msg.content === `${prefix}dm`) {
         await msg.author.send('test de dm');       // envoye un dm a celui qui a fait la commande
     }
 });

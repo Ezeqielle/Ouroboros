@@ -42,7 +42,8 @@ client.on('message', async msg => {
 
 client.on('message', async msg => {
     if (msg.content === `${prefix}b`) {
-        await msg.reply('balance comming soon');
+        const balance = await booster.balance(msg.author);
+        await msg.author.send(balance);
     }
 });
 

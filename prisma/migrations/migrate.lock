@@ -1,3 +1,4 @@
 # Prisma Migrate lockfile v1
 
 20200730223149-migration-init
+20200801155502-update-migration-mysql
