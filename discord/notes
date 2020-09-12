@@ -20,3 +20,10 @@ Staff {
     !addsrv <realm>     --> ajoute un serveur a la liste des serveur pour les balances (mettre la liste des serv dans config.json et sur la bdd)
     !rmsrv <realm>      --> enleve un serveur de la liste (le retire du config.json dans un premier temps puis la de bdd apres payement des balances sur le serv en question)
 }
+
+bot feature {
+    timer sur les apply en dj env 1 min
+    essayer de faire un system pour pas reprendre les booster du boost precedent
+    enlever les envoie de boost en commande et faire une interface web
+    function qui envoie sur discord les boost en embed
+}
