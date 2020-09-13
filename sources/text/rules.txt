@@ -1,0 +1,28 @@
+**Community Rules:**
+```Please read these carefully. Any action you take while working with Icecrown assumes that you have read and are aware of the below. Please work with us to keep things in order.```
+ Respect the management and their decisions. If you have a concern then simply raise a ticket, keep the channels drama-free. 
+ Absolutely zero tolerance for uncivil behaviour. Racism, sexism, overt rudeness or incitements of violence will result in heavy strikes or a ban.
+ Respect, value and be courteous to all customers. Answer their questions, respect their choices to participate or be AFK, be nice, be polite, be professional.
+ Know your requirements. If you have signed up to a run with specifics, check that you are eligible and in the correct loot spec.
+ Trade everything. Embrace the mindset that anything that drops is for the buyer. Your own upgrades are fetched in your own raids/dungeons away from the boost community, you are paid to trade every single item. Dungeon mounts are not required to be traded.
+ Respect the competition; other communities and sellers are to be referenced with a neutral stance in a polite manner. Light banter is acceptable in competitive spirit.
+ Have a voice. Have a mic. Use both. You must effectively communicate with your peers in English to ensure the run is as smooth as possible for the customer.
+ Log everything. If you raid with us, the leader will log, but for everything else it's your responsibility.
+ No in-game exploits. If a bug is known and can be used to your advantage, you do things normally all the same.
+ No Discord exploits. Scripts, addons, programs or anything against Discord Terms of Service are forbidden.
+
+**Payment Guidelines:**
+ Our "payment cycle" is two weeks long. Currently the cycle will open and close every second Thursday, and you will be paid over the course of the weekend from that cut-off.
+ When the cycle ends, your balance will be set to zero, and you can start earning gold towards the following one.
+ If you have accumulated less than 100k in a boost cycle, your balance will be moved into the next cycle, and only paid out when you have surpassed that amount.
+ Previous cycle amounts under 100k will be moved to the current cycle once payments are complete.
+ Payments are always sent via in-game mail.
+ Payments take time, please don't open a ticket until 5 days have passed from cycle close about missing payments. 
+ It is your responsibility to keep track of your gold intake.
+ Knowing the above information, we ask that you do not name change or server transfer your payment character as a payment cycle is ending or while payments are in progress.
+ When is Payday? You can check this in the header of the #payment-announcements channel, where we set the dates every cycle.
+
+**Striking Notice:**
+-verb: strike; cancel, remove, or cross out with or as if with a pen.
+```There isn't a rule for every aspect of boosting, common sense will always prevail. Respect leadership, boosters and boostees.
+- If you fail to adhere to the rules or fail to use common sense where appropriate, the Management reserve the right to strike your balance for any amount they deem necessary at any time to cover refunds and headaches.```

@@ -1,0 +1,27 @@
+This guide is created with the intention of ensuring your transactions are safe and smooth, and that your expectations are in-line with what we offer. Icecrown is committed to customer satisfaction and providing a great service, we hope this will provide all the information you need.
+
+:speaking_head: **_Advertiser Interaction:__**
+
+When speaking to an advertiser from trade chat, you can ask them to confirm their identity with you on Discord, by sending DM's between each other or having the advertiser ping you in a channel. Most advertisers name in-game will match in Discord, starting with "Icc", for example: Icctueri-Draenor.
+
+When speaking in DM from using #request-a-boost, ensure you are speaking to the advertiser who replied to you. Others are sometimes "sniping" the channel; we are extremely vigilant on this, but we need you to be too! If you are not speaking with the advertiser who pinged you with a reply in #request-a-boost, it is likely a scammer instead.
+
+**Trading Gold:**
+An advertiser will always want to collect a gold amount from you upfront before booking a service, this is how it looks for us, with justification:
+
+
+M+ Dungeons: Always traded upfront, the group is setup within minutes and provided immediately. If you are purchasing many runs and wish to be eligible for discounts, we would also need the gold upfront, even if the dungeons are taken to fit with your schedule.
+
+
+**__Services Guidelines and Descriptions:__**
+:punch: Mythic+:
+ :ballot_box_with_check: All loot at the end of a dungeon is yours, the only exception is mounts (unless you specifically purchased the service for a mount drop).
+ :ballot_box_with_check: You may participate if you wish, though do follow closely and adhere to any instructions if they are given.
+ :ballot_box_with_check: You may AFK the whole run if you like, though it's helpful to find a way to die first, as bosses like to target all members of the group, and subsequently reset.
+ :ballot_box_with_check: Our boosters are expected to be polite, courteous and give a good service. If this was not the case, then we hope you would let us know!
+ :ballot_box_with_check: Support for all of the above can be handled by your advertiser, or you may open a #customer-support ticket.
+ :x: Please try not to pull mobs or bosses, or enter obelisk rifts early; the group is coordinating in voice to make the run as smooth as possible for you.
+
+
+:GreenTick: **__Reviews!__**
+ If you have completed a run for any of our services and would like to leave any feedback, we welcome a review at #customer-reviews. These are important to us, as they help us identify where we are doing well, while also locating our weak spots. We hope that you would be as honest as possible, highlighting the good and the bad (if any!), while crediting the Guild, advertisers or boosters who may have been directly involved. It's completely optional, but very appreciated!
