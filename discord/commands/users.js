@@ -12,7 +12,7 @@ const { findBalanceByUserId } = require("../services/balance_service");
 module.exports.balance = async ({ id }) => {
   try {
     const user = await findUserByDiscId(id);
-    const balance = findBalanceByUserId(user.id);
+    const balance = await findBalanceByUserId(user.id);
     console.log(balance);
 
     const userBalance = new Discord.MessageEmbed()
@@ -21,7 +21,7 @@ module.exports.balance = async ({ id }) => {
       .addFields({
         inline: true,
         name: "balance",
-        value: `${balance.amount} **golds**`,
+        value: `**${balance.amount}** golds`,
       })
       .setTimestamp()
       .setFooter("boost community");
