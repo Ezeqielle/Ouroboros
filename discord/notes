@@ -3,13 +3,9 @@ Users {
     !update             --> met a jour la liste et le rio des perso puis donne les roles associes
     !b                  --> envoie un DM avec la balance de l'utilisateur
     !logs               --> envoie un DM avec l'historique de boost
-    !flex <realm>       --> ajoute un serveur a la liste de ceux dispo pour la balance de l'user (choix des serv sur les quels l'user veut boost)
 }
 
 Advertiser {
-    !boostd <gold> <realm> <key> <level>            --> nouveau boost donjon
-    !boostr                                         --> nouveau boost raid
-    !boosth <gold> <realm> <key> <level> <@user>    --> nouveau boost in house (retire les po de la balance de la personne booster)
     !strike <@user>                                 --> retire les po de la balance
 }
 
@@ -17,8 +13,6 @@ Staff {
     !reset              --> reset les roles de tous les utilisateurs (hors admin et staff) + drop les perso en bdd
     !ban <@user>        --> ban l'user, met sa balance a 0 et drop les données de ses perso de la bdd + set status a ban dans la bdd
     !unban <disc_id>    --> set status a unban dans la bdd
-    !addsrv <realm>     --> ajoute un serveur a la liste des serveur pour les balances (mettre la liste des serv dans config.json et sur la bdd)
-    !rmsrv <realm>      --> enleve un serveur de la liste (le retire du config.json dans un premier temps puis la de bdd apres payement des balances sur le serv en question)
 }
 
 bot feature {

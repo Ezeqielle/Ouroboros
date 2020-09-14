@@ -29,12 +29,6 @@ client.on('message', async msg => {
 });
 
 client.on('message', async msg => {
-    if (msg.content === `${prefix}flex`) {
-        await msg.reply('flex comming soon');
-    }
-});
-
-client.on('message', async msg => {
     if (msg.content === `${prefix}logs`) {
         await msg.reply('logs comming soon');
     }
@@ -47,22 +41,12 @@ client.on('message', async msg => {
     }
 });
 
-// advertisers commands
-client.on('message', async msg => {
-    if (msg.content === `${prefix}boostd`) {
-        await msg.reply('boostd comming soon');
-    }
-});
 
+// staff commands
 client.on('message', async msg => {
-    if (msg.content === `${prefix}boostr`) {
-       await msg.reply('boostr comming soon');
-    }
-});
-
-client.on('message', async msg => {
-    if (msg.content === `${prefix}boosth`) {
-        await msg.reply('boosth comming soon');
+    if (msg.content === `${prefix}signup`) {
+        const signUp = await booster.singUp(msg.author);
+        await msg.reply(signUp)
     }
 });
 
@@ -72,7 +56,6 @@ client.on('message', async msg => {
     }
 });
 
-// staff commands
 client.on('message', async msg => {
     if (msg.content === `'${prefix}reset`) {
         await msg.reply('rest comming soon');
@@ -91,17 +74,6 @@ client.on('message', async msg => {
     }
 });
 
-client.on('message', async msg => {
-    if (msg.content === `${prefix}addsrv`) {
-       await msg.reply('addsrv comming soon');
-    }
-});
-
-client.on('message', async msg => {
-    if (msg.content === `${prefix}rmsrv`) {
-        await msg.reply('rmsrv comming soon');
-    }
-});
 
 console.log('[Discord]', 'Logging in...');
 client.login(config.bot_token);
