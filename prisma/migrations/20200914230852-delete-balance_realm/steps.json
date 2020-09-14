@@ -1,0 +1,16 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "User",
+      "field": "balances",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Balance",
+      "field": "realm"
+    }
+  ]
+}

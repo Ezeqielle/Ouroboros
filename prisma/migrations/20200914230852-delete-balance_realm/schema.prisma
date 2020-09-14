@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:root@localhost:3306/commubot"
+  url = "***"
 }
 
 generator client {
@@ -16,7 +16,7 @@ model User {
   blizzard_token    String      
   status            Int         @default(1)
   characters        Character[]
-  balance          Balance
+  balances          Balance
   boost             Boost[]
   createdAt         DateTime     @default(now())
   updatedAt         DateTime     @updatedAt
@@ -25,8 +25,8 @@ model User {
 model Balance {
     id             Int          @default(autoincrement()) @id
     amount         Int          @default(0)
-    user           User?        @relation(fields:[userId], references:[id])
-    userId         Int?
+    user           User         @relation(fields:[userId], references:[id])
+    userId         Int
     createdAt      DateTime     @default(now())
     updatedAt      DateTime     @updatedAt
 }

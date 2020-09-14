@@ -2,3 +2,7 @@
 
 20200730223149-migration-init
 20200801155502-update-migration-mysql
+20200914223746-add_balance_amount
+20200914230852-delete-balance_realm
+20200914233529-edit-balance
+20200914233618-edit-balance
