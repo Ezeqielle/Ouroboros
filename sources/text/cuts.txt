@@ -4,12 +4,12 @@
 @Legendary Advertiser: 15%
 
 If you wish to progress to the next rank of Advertiser, you will need to meet the following thresholds:
-To reach @Epic Advertiser you must make 4M gold in one pay cycle.
-To reach @Legendary Advertiser you must make 10M gold in one pay cycle.
+To reach @Epic Advertiser you must make 2M gold in one pay cycle.
+To reach @Legendary Advertiser you must make 5M gold in one pay cycle.
 
 
 Once you reach @Epic Advertiser you can keep it, unless you make no sales over two cycles.
-@Legendary Advertiser will have to make at least 8M gold per cycle to keep the rank.
+@Legendary Advertiser will have to make at least 4M gold per cycle to keep the rank.
 
 
 **Booster Cuts:**
