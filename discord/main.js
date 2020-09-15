@@ -8,7 +8,8 @@ const prefix = "!";
 const staff = require("./commands/staff.js");
 const adv = require("./commands/advertisers.js");
 const booster = require("./commands/users.js");
-const test = require("./commands/test.js")
+const allC = require("./commands/all.js");
+const test = require("./commands/test.js");
 
 // server commands
 client.on("ready", () => {
@@ -45,8 +46,13 @@ client.on("message", async (msg) => {
 // staff commands
 client.on("message", async (msg) => {
   if (msg.content === `${prefix}signup`) {
-    const signUp = await staff.singUp(msg.author);
-    await msg.reply(signUp);
+    if (msg.member.roles.cache.some((role) => role.name === "admin")) {
+      const signUp = await staff.singUp(msg.author);
+      await msg.reply(signUp);
+    } else {
+      const user = await allC.noPerm(msg.author);
+      await msg.reply(user);
+    }
   }
 });
 
@@ -76,11 +82,16 @@ client.on("message", async (msg) => {
 
 // test command
 client.on("message", async (msg) => {
-    if (msg.content === `${prefix}userid`) {
-        const useridt = await test.userid(msg.mentions)
-        await msg.reply(useridt)
+  if (msg.content === `${prefix}userid`) {
+    const withoutPrefix = msg.content.slice(prefix.length);
+    const split = withoutPrefix.split(/ +/);
+    const args = split.slice(1);
+    if (args[0]) {
+      const useridt = await test.userid(args[0]);
+      await msg.reply(useridt);
     }
-})
+  }
+});
 
 // end of bot
 console.log("[Discord]", "Logging in...");

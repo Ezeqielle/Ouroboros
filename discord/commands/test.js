@@ -5,12 +5,12 @@ global.discordJsClient = client;
 
 module.exports.userid = async (mention) => {
   try {
+    console.log(mention)
     const matches = mention.match(/^<@!?(\d+)>$/);
-    if (!matches) return;
     const id = matches[1];
     const idEmbed = new Discord.MessageEmbed()
       .setColor("#ead50b")
-      .setTitle("Balance")
+      .setTitle("User ID")
       .addFields({
         inline: true,
         name: "User ID",
@@ -23,7 +23,7 @@ module.exports.userid = async (mention) => {
   } catch (error) {
     const idEmbed = new Discord.MessageEmbed()
       .setColor("#FF0000")
-      .setTitle("Sign Up")
+      .setTitle("User ID")
       .addFields({ inline: true, name: "Error", value: error.message })
       .setTimestamp()
       .setFooter("boost community");
