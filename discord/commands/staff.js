@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 
 const { createUser } = require("../services/staff_services");
 
-module.exports.singUp = async ({ id }) => {
+module.exports.singUp = async (id) => {
   try {
     const user = await createUser(id);
     console.log(user);

@@ -5,8 +5,8 @@ global.discordJsClient = client;
 
 module.exports.userid = async (mention) => {
   try {
-    console.log(mention)
     const matches = mention.match(/^<@!?(\d+)>$/);
+    if (!matches) throw new Error("Invalid arguments");
     const id = matches[1];
     const idEmbed = new Discord.MessageEmbed()
       .setColor("#ead50b")
