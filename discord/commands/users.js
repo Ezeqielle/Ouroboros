@@ -6,7 +6,7 @@ global.discordJsClient = client;
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-const { findUserByDiscId, createUser } = require("../services/user_services");
+const { findUserByDiscId } = require("../services/user_services");
 const { findBalanceByUserId } = require("../services/balance_service");
 
 module.exports.balance = async ({ id }) => {
