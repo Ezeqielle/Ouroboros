@@ -53,11 +53,11 @@ client.on("message", async (msg) => {
       if (args[0]) {
         const userId = await allC.userid(args[0])
         const signUp = await staff.singUp(userId);
-        await msg.reply(signUp);
+        await client.channels.cache.get('756138859707760651').send(signUp);
       }
     } else {
       const user = await allC.noPerm(msg.author);
-      await msg.reply(user);
+      await client.channels.cache.get('756138859707760651').send(user);
     }
   }
 });
