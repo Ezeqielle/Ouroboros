@@ -18,7 +18,7 @@ module.exports.singUp = async (id) => {
       .addFields({
         inline: true,
         name: "Sign Up",
-        value: "account successfully created",
+        value: "account for user <@" + id + "> successfully created",
       })
       .setTimestamp()
       .setFooter("boost community");
