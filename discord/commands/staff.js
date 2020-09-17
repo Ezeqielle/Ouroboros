@@ -6,7 +6,7 @@ global.discordJsClient = client;
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-const { createUser } = require("../services/staff_services");
+const { createUser, updateBalance } = require("../services/staff_services");
 
 module.exports.singUp = async (id) => {
   try {
@@ -31,5 +31,20 @@ module.exports.singUp = async (id) => {
       .setTimestamp()
       .setFooter("boost community");
     return userSignUp;
+  }
+};
+
+module.exports.addBalance = async (id, amount) => {
+  try {
+    const balance = await updateBalance(id, amount);
+    console.log(balance);
+  } catch (error){
+    const balanceUpdate = new Discord.MessageEmbed()
+      .setColor("#FF0000")
+      .setTitle("Sign Up")
+      .addFields({ inline: true, name: "Error", value: error.message })
+      .setTimestamp()
+      .setFooter("boost community");
+    return balanceUpdate;
   }
 };
