@@ -63,6 +63,27 @@ client.on("message", async (msg) => {
 });
 
 client.on("message", async (msg) => {
+  if (msg.content.startsWith(`${prefix}add`)) {
+    if (msg.member.roles.cache.some((role) => role.name === "admin")) {
+      const withoutPrefix = msg.content.slice(prefix.length);
+      const split = withoutPrefix.split(/ +/);
+      const args = split.slice(1);
+      if (args[0]) {
+        console.log(args)
+        const userId = await allC.userid(args[0])
+        const amount = args[1]
+        const newBalance = await staff.addBalance(userId, amount);
+        await client.channels.cache.get('756163717527502998').send(newBalance);
+      }
+    } else {
+      const user = await allC.noPerm(msg.author);
+      await client.channels.cache.get('756163717527502998').send(user);
+    }
+  }
+});
+
+
+client.on("message", async (msg) => {
   if (msg.content === `${prefix}strike`) {
     await msg.reply("strike comming soon");
   }
