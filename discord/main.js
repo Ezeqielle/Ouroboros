@@ -76,11 +76,10 @@ client.on("message", async (msg) => {
       }
     } else {
       const user = await allC.noPerm(msg.author);
-      await client.channels.cache.get('756163717527502998').send(user);
+      await client.channels.cache.get('756138859707760651').send(user);
     }
   }
 });
-
 
 client.on("message", async (msg) => {
   if (msg.content.startsWith(`${prefix}strike`)) {
@@ -96,14 +95,15 @@ client.on("message", async (msg) => {
       }
     } else {
       const user = await allC.noPerm(msg.author);
-      await client.channels.cache.get('756163717527502998').send(user);
+      await client.channels.cache.get('756138859707760651').send(user);
     }
   }
 });
 
 client.on("message", async (msg) => {
-  if (msg.content === `'${prefix}reset`) {
-    await msg.reply("rest comming soon");
+  if (msg.content.startsWith(`${prefix}reset`)) {
+    const resetRoles = await staff.resetRoles(msg);
+    await client.channels.cache.get('756163717527502998').send(resetRoles);
   }
 });
 

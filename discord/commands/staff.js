@@ -75,3 +75,15 @@ module.exports.strikeBalance = async (id, amount) => {
     return balanceUpdate;
   }
 };
+
+module.exports.resetRoles = async (message) => {
+
+  try {
+    if (message.member.roles.some(r=>["epic tank", "rare tank", "commun tank", "epic healer", "rare healer", "commun healer", "epic dps", "rare dps", "commun dps"].includes(r.name))){
+      console.log(e)
+    }
+  }catch (error) {
+    console.log(error.message)
+    return "error"
+  }
+}
