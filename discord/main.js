@@ -69,7 +69,6 @@ client.on("message", async (msg) => {
       const split = withoutPrefix.split(/ +/);
       const args = split.slice(1);
       if (args[0]) {
-        console.log(args)
         const userId = await allC.userid(args[0])
         const amount = args[1]
         const newBalance = await staff.addBalance(userId, amount);
@@ -90,7 +89,6 @@ client.on("message", async (msg) => {
       const split = withoutPrefix.split(/ +/);
       const args = split.slice(1);
       if (args[0]) {
-        console.log(args)
         const userId = await allC.userid(args[0])
         const amount = args[1]
         const newBalance = await staff.strikeBalance(userId, amount);
