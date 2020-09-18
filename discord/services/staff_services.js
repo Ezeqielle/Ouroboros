@@ -22,12 +22,10 @@ module.exports.createUser = async (discordId) => {
   throw new Error("User not created");
 };
 
-module.exports.updateBalance = async (discordId, amount) => {
+module.exports.updateBalanceAdd = async (discordId, amount) => {
   const user = await findUserByDiscId(discordId);
   const balance = await findBalanceByUserId(user.id);
-  console.log(balance.amount);
   const newBalance = balance.amount + parseInt(amount);
-  console.log(newBalance);
   if (user) {
     const nextBalance = await prisma.balance.updateMany({
       where: {
@@ -41,5 +39,43 @@ module.exports.updateBalance = async (discordId, amount) => {
     });
   } else {
     throw new Error("user not found");
+  }
+};
+
+module.exports.updateBalanceStrike = async (discordId, amount) => {
+  const user = await findUserByDiscId(discordId);
+  const balance = await findBalanceByUserId(user.id);
+  const newBalance = balance.amount - parseInt(amount);
+  if (newBalance > 0) {
+    if (user) {
+      const nextBalance = await prisma.balance.updateMany({
+        where: {
+          user: {
+            id: user.id,
+          },
+        },
+        data: {
+          amount: newBalance,
+        },
+      });
+    } else {
+      throw new Error("user not found");
+    }
+  } else {
+    const newBalance = 0;
+    if (user) {
+      const nextBalance = await prisma.balance.updateMany({
+        where: {
+          user: {
+            id: user.id,
+          },
+        },
+        data: {
+          amount: newBalance,
+        },
+      });
+    } else {
+      throw new Error("user not found");
+    }
   }
 };
