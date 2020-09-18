@@ -23,14 +23,16 @@ module.exports.createUser = async (discordId) => {
 };
 
 module.exports.updateBalance = async (discordId, amount) => {
-  const balance = await findBalanceByUserId(discordId);
-  console.log(balance[0]);
-  //const newBalance = balance[0] + amount;
+  const user = await findUserByDiscId(discordId);
+  const balance = await findBalanceByUserId(user.id);
+  console.log(balance.amount);
+  const newBalance = balance.amount + parseInt(amount);
+  console.log(newBalance);
   if (user) {
-    const nextBalance = await prisma.balance.update({
+    const nextBalance = await prisma.balance.updateMany({
       where: {
         user: {
-          id: userId,
+          id: user.id,
         },
       },
       data: {
