@@ -3,14 +3,13 @@
 commubot repository
 
 [bot link](https://discord.com/api/oauth2/authorize?client_id=760217238425829387&permissions=0&scope=bot)
-(https://discord.com/api/oauth2/authorize?client_id=735418949709332532&permissions=0&scope=bot)
 
 # For devs
 
 ## First time install
 
     $> docker-compose up -d
-    $> npm install  
+    $> npm install
 	$> npx prisma generate
 
 ## New migration (model editing)
