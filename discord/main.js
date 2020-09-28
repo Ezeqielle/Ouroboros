@@ -10,6 +10,7 @@ const adv = require("./commands/advertisers.js");
 const booster = require("./commands/users.js");
 const allC = require("./commands/all.js");
 const test = require("./commands/test.js");
+const { use } = require("passport");
 
 // server commands
 client.on("ready", () => {
@@ -50,9 +51,11 @@ client.on("message", async (msg) => {
       const withoutPrefix = msg.content.slice(prefix.length);
       const split = withoutPrefix.split(/ +/);
       const args = split.slice(1);
+      const member = msg.mentions.members.first();
+      const userNick = member.nickname;
       if (args[0]) {
         const userId = await allC.userid(args[0])
-        const signUp = await staff.singUp(userId);
+        const signUp = await staff.singUp(userId, userNick);
         await client.channels.cache.get('756138859707760651').send(signUp);
       }
     } else {
@@ -121,14 +124,12 @@ client.on("message", async (msg) => {
 
 // test command
 client.on("message", async (msg) => {
-  if (msg.content.startsWith(`${prefix}userid`)) {
-    const withoutPrefix = msg.content.slice(prefix.length);
-    const split = withoutPrefix.split(/ +/);
-    const args = split.slice(1);
-    if (args[0]) {
-      const useridt = await test.userid(args[0]);
-      await msg.reply(useridt);
-    }
+  if (msg.content.startsWith(`${prefix}name`)) {
+    const member = msg.mentions.members.first();
+    console.log(member)
+    const userNick = member.nickname;
+    console.log(userNick)
+    await msg.reply(userNick)
   }
 });
 

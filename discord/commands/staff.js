@@ -8,16 +8,16 @@ const prisma = new PrismaClient();
 
 const { createUser, updateBalanceAdd, updateBalanceStrike } = require("../services/staff_services");
 
-module.exports.singUp = async (id) => {
+module.exports.singUp = async (id, discordName) => {
   try {
-    const user = await createUser(id);
+    const user = await createUser(id, discordName);
     console.log(user);
     const userSignUp = new Discord.MessageEmbed()
       .setColor("#008000")
       .setTitle("Sign Up")
       .addFields({
         inline: true,
-        name: "Sign Up",
+        name: discordName,
         value: "account for user <@" + id + "> successfully created",
       })
       .setTimestamp()

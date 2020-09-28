@@ -8,18 +8,7 @@ module.exports.userid = async (mention) => {
     const matches = mention.match(/^<@!?(\d+)>$/);
     if (!matches) throw new Error("Invalid arguments");
     const id = matches[1];
-    const idEmbed = new Discord.MessageEmbed()
-      .setColor("#ead50b")
-      .setTitle("User ID")
-      .addFields({
-        inline: true,
-        name: "User ID",
-        value: id,
-      })
-      .setTimestamp()
-      .setFooter("boost community");
-
-    return idEmbed;
+    return id;
   } catch (error) {
     const idEmbed = new Discord.MessageEmbed()
       .setColor("#FF0000")

@@ -4,10 +4,11 @@ const prisma = new PrismaClient();
 const { findUserByDiscId } = require("../services/user_services");
 const { findBalanceByUserId } = require("../services/balance_service");
 
-module.exports.createUser = async (discordId) => {
+module.exports.createUser = async (discordId, discordName) => {
   const newUser = await prisma.user.create({
     data: {
       discord_id: discordId,
+      discord_name: discordName,
       blizzard_token: "",
       status: 1,
       characters: [],
