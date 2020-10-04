@@ -1,8 +1,8 @@
-# Community Bot
+# Ouroboros
 
-commubot repository
+Ouroboros repository
 
-[bot link](https://discord.com/api/oauth2/authorize?client_id=760217238425829387&permissions=0&scope=bot)
+[bot link](https://discord.com/api/oauth2/authorize?client_id=760217238425829387&permissions=8&scope=bot)
 
 # For devs
 
