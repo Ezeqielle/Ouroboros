@@ -16,8 +16,7 @@ Ouroboros repository
 
 Once you have done a modification on `schema.prisma` execute these commands:
 
-    $> npx prisma2 migrate save --experimental
-    $> npx prisma2 migrate up --experimental
+    $> npx prisma migrate dev --name init
     $> npx prisma generate
 
 :warning: don't forget to commit and push your changes.
