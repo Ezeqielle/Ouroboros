@@ -24,7 +24,7 @@ client.on("message", async (msg) => {
     await msg.reply("auth comming soon");
   }
 });
-`${prefix}`;
+
 client.on("message", async (msg) => {
   if (msg.content === `${prefix}update`) {
     await msg.reply("update comming soon");
